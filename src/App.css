@@ -1,38 +1,202 @@
-.App {
-  text-align: center;
+*{
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navbar-section {
+  width: 100%;
+  height: 100%;
+  background-color: #024963 ;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar-content{
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: space-between;
+  padding-top: 30px;
+}
+
+.logo img{
+  margin-left: 40px;
+  width: 150px;
+  height: 50px;
+}
+
+.navbar-menu > ul{
+  display: flex;
+}
+
+.navbar-menu >ul>li{
+  list-style: none;
+  margin-right: 40px;
+  color: white;
+
+}
+
+.dropdown-item{
+  margin-top: 10px;
+}
+
+.hero-section{
+  width: 100%;
+  height: 100%;
+  background-color: #024963 ;
+}
+
+.hero-content{
+  display: flex;
+  padding-top: 100px;
+  padding-bottom: 70px;
+}
+
+.hero-text{
+  margin-left: 80px;
+}
+
+.hero-text h1{
+  color: white;
+  font-size: 4em;
+  font-weight: bold;
+  padding-top: 20px;
+}
+
+.hero-text>p{
+  color: #f7b141;
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 50px;
+}
+.hero-image> img{
+  width: 340px;
+  margin-right: 120px;
+}
+
+
+.btn-book{
+  font-size: 1em;
+  background-color: #f7b141;
+  color: #024963 ;
+  font-weight: bold;
+  border-radius: 5px;
+  text-decoration: none;
+  padding: 10px 20px;
+}
+
+.btn-start{
+  background-color: #fff !important;
+
+}
+
+.about-section{
+  width: 100%;
+  height: 100%;
+  margin-top: 100px;
+}
+.about-section h2{
+  font-size: 3em;
+  font-weight: bold;
+}
+.about-content{
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+} 
+.about-image{
+  margin-left: 50px;
+  margin-top: 70px;
+}
+.about-image >img {
+  width: 400px;
+  margin-right: 150px;
+}
+
+.about-text{
+  margin: 100px 0px 0px 40px;
+}
+
+.about-text p{
+  font-size: 1.4em;
+}
+.about-text> .bold-para{
+  font-weight: bold;
+}
+
+.tagline-section{
+  width: 100%;
+  height: 100%;
+  margin-top: 100px;
+}
+
+.tagline-content{
+  color: white;
+  background-color: #024963 ;
+  padding: 40px 0px;
+}
+
+.tagline-content > h2{
+  font-size: 2.7em;
+  font-weight: bold;
+}
+
+.veritcal-line{
+  width: 2px;
+  height: 90px;
+  background-color: #f7b141;
+}
+
+.whychoose-section{
+  height: 100%;
+  width: 100%;
+}
+
+.whychoose-content{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 100px;
+}
+
+.whychoose-image > img{
+  width: 600px;
+  height: 450px;
+  border-radius:  0px 30px 30px 0px;
+}
+
+.whychoose-text{
+  margin: 70px 50px 0px 50px ;
+
+}
+
+.whychoose-text .main{
+  font-weight: bolder;
+  font-size: 1.1em;
+}
+.whychoose-text > div{
+  margin-top: 40px;
+}
+
+.whychoose-text .text{
+  margin: -90px 0px 50px 10px ;
+  font-size: 2.3em;
+  font-weight: bold;
+}
+
+.whyOpposite-image > img{
+  width: 600px;
+  height: 450px;
+  border-radius:  30px 0px 0px 30px;
+}
+
+.whyOpposite{
+  background-color: #024963;
+  padding: 0px 0px 30px 0px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.whyOpposite-content{
+  padding-top: 50px;
+  padding-bottom: 20px;
 }
