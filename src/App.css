@@ -568,3 +568,13 @@
     padding-left: 0;
    }
 }
+
+@media only screen and (min-width: 1350px) {
+  .whychoose-image > img{
+    width: 850px;
+  }
+
+  .whyOpposite-image> img{
+    width: 919px;
+  }
+}
