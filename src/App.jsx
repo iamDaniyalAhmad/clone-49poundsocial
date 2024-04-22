@@ -1,8 +1,15 @@
 
+import Slider from 'react-slick';
 import './App.css';
 import About from './Components/About';
+import Client from './Components/Client';
+import FAQ from './Components/FAQ';
+import Footer from './Components/Footer';
 import Hero from './Components/Hero';
 import Navbar from './Components/Navbar';
+import Plans from './Components/Plans';
+import Platforms from './Components/Platforms';
+import Process from './Components/Process';
 import Tagline from './Components/Tagline';
 import WhyChoose from './Components/WhyChoose';
 import WhyOpposite from './Components/WhyOpposite';
@@ -34,6 +41,13 @@ function App() {
     <WhyChoose why={why} />
     <WhyOpposite why={whyOpposite}/>
     <WhyChoose why={why2} />
+    <Process/>
+    <Plans/>
+    <Client/>
+    <Platforms/>
+    {/* <Slider/> */}
+    <FAQ/>
+    <Footer/>
     </>
   );
 }
