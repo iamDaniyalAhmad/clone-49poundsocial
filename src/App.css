@@ -603,4 +603,16 @@
     margin: 10px;
     padding: 20px;
    }
+
+   .card{
+    width: 95%;
+   }
+
+   .footer >.first-column > button{
+    width: 90%;
+   }
+
+   .footer .third-column{
+    padding-left: 0;
+   }
 }
