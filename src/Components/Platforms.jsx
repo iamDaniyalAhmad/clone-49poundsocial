@@ -14,13 +14,37 @@ const Platforms = () => {
         <h5 className='text-center platform-heading'>Platforms We Use To Drive Client Success.</h5>
     <div className="slider">
         <div className="slide-track">
-                {
-                    cards.map((card) => 
-                    <div className="slide">
-                        <img src={card.photo} alt="" />
-                    </div>
-                )
-                }
+            <div className="slide">
+                <img src="images/1.webp" alt="" />
+            </div>
+            <div className="slide">
+                <img src="images/2.webp" alt="" />
+            </div>
+            <div className="slide">
+                <img src="images/3.webp" alt="" />
+            </div>
+            <div className="slide">
+                <img src="images/4.webp" alt="" />
+            </div>
+            <div className="slide">
+                <img src="images/5.webp" alt="" />
+            </div>
+            <div className="slide">
+                <img src="images/1.webp" alt="" />
+            </div>
+            <div className="slide">
+                <img src="images/2.webp" alt="" />
+            </div>
+            <div className="slide">
+                <img src="images/3.webp" alt="" />
+            </div>
+            <div className="slide">
+                <img src="images/4.webp" alt="" />
+            </div>
+            <div className="slide">
+                <img src="images/5.webp" alt="" />
+            </div>
+                
         </div>
         
     </div>
