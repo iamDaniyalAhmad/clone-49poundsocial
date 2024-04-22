@@ -26,8 +26,8 @@ const Process = () => {
         <div className="process-content container">
             <div className="row">
                 {
-                    steps.map((step) =>
-                    <div className='process-step col-md-4'>
+                    steps.map((step,index) =>
+                    <div key={index} className='process-step col-md-4'>
                         
                     <h4 className='text-center'>{step.num}</h4>
                     <h5 className='text-center'>{step.title}</h5>

@@ -204,14 +204,14 @@ const Plans = () => {
         <div className="plan-content container">
             <div className="row">
                 {
-                    plan.map((p) => 
-                    <div className='col-md-4 plan-columns' style={{background:p.background, border: p.border, color: p.color}}>
+                    plan.map((p,index) => 
+                    <div key={index} className='col-md-4 plan-columns' style={{background:p.background, border: p.border, color: p.color}}>
                         <h4 className='text-center main-heading'>{p.title}</h4>
                         <h4 className='text-center'>{p.price}</h4>
                         <p className='text-center'>{p.desc}</p>
                         {
-                            p.Features.map((f)=>
-                            <p> {f.include===true?<svg aria-hidden="true" fill={p.iconColor} class="e-font-icon-svg e-far-check-circle tick mx-2" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 48c110.532 0 200 89.451 200 200 0 110.532-89.451 200-200 200-110.532 0-200-89.451-200-200 0-110.532 89.451-200 200-200m140.204 130.267l-22.536-22.718c-4.667-4.705-12.265-4.736-16.97-.068L215.346 303.697l-59.792-60.277c-4.667-4.705-12.265-4.736-16.97-.069l-22.719 22.536c-4.705 4.667-4.736 12.265-.068 16.971l90.781 91.516c4.667 4.705 12.265 4.736 16.97.068l172.589-171.204c4.704-4.668 4.734-12.266.067-16.971z"></path></svg>:<svg aria-hidden="true" class="e-font-icon-svg e-fas-times-circle tick mx-2"  fill={p.iconColor} viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm121.6 313.1c4.7 4.7 4.7 12.3 0 17L338 377.6c-4.7 4.7-12.3 4.7-17 0L256 312l-65.1 65.6c-4.7 4.7-12.3 4.7-17 0L134.4 338c-4.7-4.7-4.7-12.3 0-17l65.6-65-65.6-65.1c-4.7-4.7-4.7-12.3 0-17l39.6-39.6c4.7-4.7 12.3-4.7 17 0l65 65.7 65.1-65.6c4.7-4.7 12.3-4.7 17 0l39.6 39.6c4.7 4.7 4.7 12.3 0 17L312 256l65.6 65.1z"></path></svg>}  {f.feature}</p>
+                            p.Features.map((f,i)=>
+                            <p key={i}> {f.include===true?<svg aria-hidden="true" fill={p.iconColor} className="e-font-icon-svg e-far-check-circle tick mx-2" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 48c110.532 0 200 89.451 200 200 0 110.532-89.451 200-200 200-110.532 0-200-89.451-200-200 0-110.532 89.451-200 200-200m140.204 130.267l-22.536-22.718c-4.667-4.705-12.265-4.736-16.97-.068L215.346 303.697l-59.792-60.277c-4.667-4.705-12.265-4.736-16.97-.069l-22.719 22.536c-4.705 4.667-4.736 12.265-.068 16.971l90.781 91.516c4.667 4.705 12.265 4.736 16.97.068l172.589-171.204c4.704-4.668 4.734-12.266.067-16.971z"></path></svg>:<svg aria-hidden="true" className="e-font-icon-svg e-fas-times-circle tick mx-2"  fill={p.iconColor} viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm121.6 313.1c4.7 4.7 4.7 12.3 0 17L338 377.6c-4.7 4.7-12.3 4.7-17 0L256 312l-65.1 65.6c-4.7 4.7-12.3 4.7-17 0L134.4 338c-4.7-4.7-4.7-12.3 0-17l65.6-65-65.6-65.1c-4.7-4.7-4.7-12.3 0-17l39.6-39.6c4.7-4.7 12.3-4.7 17 0l65 65.7 65.1-65.6c4.7-4.7 12.3-4.7 17 0l39.6 39.6c4.7 4.7 4.7 12.3 0 17L312 256l65.6 65.1z"></path></svg>}  {f.feature}</p>
                         )
                         }
                         <button href="" className='plan-button' style={{background:p.buttonBackground,color:p.buttonColor}}>SIGN UP NOW</button>

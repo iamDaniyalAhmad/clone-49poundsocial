@@ -53,8 +53,8 @@ const FAQ = () => {
             <img src="images/faq.webp" alt="" />
         </div>
         <div className="faq-faqs col-md-7">
-          {question.map((ques) => (
-            <Accordion content={ques} />
+          {question.map((ques,index) => (
+            <Accordion key={index} content={ques} />
           ))}
         </div>
       </div>

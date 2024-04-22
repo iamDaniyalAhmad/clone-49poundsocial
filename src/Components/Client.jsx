@@ -33,8 +33,8 @@ const Client = () => {
         <div className="client-content container">
             <div className="row cards">
                 {
-                    testimonial.map((test) => 
-                    <div className="col-md-6 card">
+                    testimonial.map((test,index) => 
+                    <div key={index} className="col-md-6 card">
                         <Rating initialValue={5} size={25}/>
                         <p className='review'>{test.review}</p>
                         <h6>{test.author}</h6>
