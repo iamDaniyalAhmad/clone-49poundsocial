@@ -45,7 +45,6 @@ function App() {
     <Plans/>
     <Client/>
     <Platforms/>
-    {/* <Slider/> */}
     <FAQ/>
     <Footer/>
     </>
