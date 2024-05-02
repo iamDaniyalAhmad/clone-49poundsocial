@@ -1,5 +1,4 @@
 
-import Slider from 'react-slick';
 import './App.css';
 import About from './Components/About';
 import Client from './Components/Client';
@@ -13,6 +12,7 @@ import Process from './Components/Process';
 import Tagline from './Components/Tagline';
 import WhyChoose from './Components/WhyChoose';
 import WhyOpposite from './Components/WhyOpposite';
+
 
 
 function App() {
@@ -43,10 +43,11 @@ function App() {
     <WhyChoose why={why2} />
     <Process/>
     <Plans/>
-    <Client/>
+   <Client/>
     <Platforms/>
     <FAQ/>
     <Footer/>
+
     </>
   );
 }

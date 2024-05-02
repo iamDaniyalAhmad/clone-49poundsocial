@@ -9,23 +9,23 @@ const Navbar = () => {
     };
 
     return (
-        <div className="navbar-section">
-            <div className="navbar-content">
+        <div className="navbar-section bg-[#024963]">
+            <div className="navbar-content flex justify-between items-center py-8">
                 <div className="logo">
-                    <img src="images/49-pound-social-logo-yellow-and-white.webp" alt="" />
+                    <img src="images/49-pound-social-logo-yellow-and-white.webp" alt="" className="ml-10 w-36 h-12" />
                 </div>
                 {/* Mobile menu button */}
-                <button className="mobile-menu-button" onClick={toggleMobileMenu}>
+                <button className="mobile-menu-button mr-10 md:hidden" onClick={toggleMobileMenu}>
                     <span className="menu-icon"></span>
                     <span className="menu-icon"></span>
                     <span className="menu-icon"></span>
                 </button>
                 {/* Navbar menu */}
-                <div className={`navbar-menu ${isMobileMenuOpen ? 'open' : ''}`}>
-                    <ul>
-                        <li>OUR STORY</li>
-                        <li className="nav-item dropdown">
-                            <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <div className={`navbar-menu md:block ${isMobileMenuOpen? 'block' : 'hidden'}`}>
+                    <ul className="flex">
+                        <li className="mr-10 text-white">OUR STORY</li>
+                        <li className="mr-10 text-white nav-item dropdown">
+                            <a className="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 WHAT WE DO
                             </a>
                             <ul className="dropdown-menu">
@@ -37,9 +37,9 @@ const Navbar = () => {
                                 <li><a className="dropdown-item" href="#">Referral Scheme</a></li>
                             </ul>
                         </li>
-                        <li>CONTACT</li>
-                        <li>SAMPLES</li>
-                        <li>SIGN IN</li>
+                        <li className="mr-10 text-white">CONTACT</li>
+                        <li className="mr-10 text-white">SAMPLES</li>
+                        <li className="mr-10 text-white">SIGN IN</li>
                     </ul>
                 </div>
             </div>
