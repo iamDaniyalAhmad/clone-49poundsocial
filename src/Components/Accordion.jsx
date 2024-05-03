@@ -33,22 +33,17 @@ const Accordion = (props) => {
             className="accordion-button"
             type="button"
             onClick={() => toggleAccordion(props.content.index)}
-            data-bs-toggle="collapse"
-            data-bs-target={`#${props.content.index}`}
-            aria-expanded={isItemExpanded(props.content.index) ? 'true' : 'false'}
-            aria-controls={props.content.index}
             style={getAccordionStyles(props.content.index)}
-
           >
             {props.content.q}
           </button>
         </h2>
         <div
-          id={props.content.index}
           className={`accordion-collapse collapse ${isItemExpanded(props.content.index) ? 'show' : ''}`}
-          data-bs-parent="#accordionExample"
+          id={props.content.index}
+          aria-expanded={isItemExpanded(props.content.index) ? 'true' : 'false'}
         >
-          <div className="accordion-body" style={{ backgroundColor: '#f7b141', color: 'black' }}>
+          <div className="accordion-body">
             {props.content.a}
           </div>
         </div>

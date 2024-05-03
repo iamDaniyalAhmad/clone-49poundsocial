@@ -26,16 +26,16 @@ const Navbar = () => {
                     <ul className="md:flex">
                         <li className="mr-10 text-white">OUR STORY</li>
                         <li className="mr-10 text-white nav-item dropdown">
-                            <a className="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a className="nav-link dropdown-toggle text-white" href="/" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 WHAT WE DO
                             </a>
                             <ul className="dropdown-menu">
-                                <li className='mt-3'><a className="dropdown-item" href="#">Social Media Management</a></li>
-                                <li className='mt-3'><a className="dropdown-item" href="#">Social Media Marketing</a></li>
-                                <li className='mt-3'><a className="dropdown-item" href="#">SEO Blogs</a></li>
-                                <li className='mt-3'><a className="dropdown-item" href="#">Branding & Design</a></li>
-                                <li className='mt-3'><a className="dropdown-item" href="#">Resell</a></li>
-                                <li className='mt-3'><a className="dropdown-item" href="#">Referral Scheme</a></li>
+                                <li className='mt-3'><a className="dropdown-item" href="/">Social Media Management</a></li>
+                                <li className='mt-3'><a className="dropdown-item" href="/">Social Media Marketing</a></li>
+                                <li className='mt-3'><a className="dropdown-item" href="/">SEO Blogs</a></li>
+                                <li className='mt-3'><a className="dropdown-item" href="/">Branding & Design</a></li>
+                                <li className='mt-3'><a className="dropdown-item" href="/">Resell</a></li>
+                                <li className='mt-3'><a className="dropdown-item" href="/">Referral Scheme</a></li>
                             </ul>
                         </li>
                         <li className="mr-10 text-white">CONTACT</li>

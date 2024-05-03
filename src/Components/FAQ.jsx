@@ -53,7 +53,7 @@ const FAQ = () => {
           </div>
           <div className=" md:w-[50%]">
             {question.map((ques, index) => (
-              <Accordion key={index} content={ques} />
+              <Accordion key={index} content={ques}  />
             ))}
           </div>
         </div>
