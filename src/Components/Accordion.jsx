@@ -1,55 +1,47 @@
 import React, { useState } from 'react';
 
 const Accordion = (props) => {
-  // Initialize state to track the expanded state of each accordion item
-  const [expandedItems, setExpandedItems] = useState([]);
+  // Initialize state to track the expanded state of the accordion
+  const [isExpanded, setIsExpanded] = useState(false);
 
-  // Function to toggle the expansion state of a specific item
-  const toggleAccordion = (index) => {
-    setExpandedItems((prevItems) =>
-      prevItems.includes(index) ? prevItems.filter((item) => item !== index) : [...prevItems, index]
-    );
+  // Function to toggle the expansion state of the accordion
+  const toggleAccordion = () => {
+    setIsExpanded(!isExpanded);
   };
 
-  // Function to check if an item is currently expanded
-  const isItemExpanded = (index) => {
-    return expandedItems.includes(index);
-  };
-
-  // Function to generate dynamic styles based on item's expanded state
-  const getAccordionStyles = (index) => {
-    return {
-      backgroundColor: isItemExpanded(index) ? 'white' : '#024963',
-      color: isItemExpanded(index) ? '#024963' : 'white',
-      border: 'none',
-    };
-  };
+ 
 
   return (
-    <div className="accordion" id="accordionExample">
-      <div className="accordion-item" style={{ border: 'none' }}>
-        <h2 className="accordion-header">
+    <div>
+        <h2 id="accordion-collapse-heading-1  ">
+        {/* text-gray-500 border border-b-0 border-gray-200 rounded-t-xl focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 */}
           <button
-            className="accordion-button"
             type="button"
-            onClick={() => toggleAccordion(props.content.index)}
-            style={getAccordionStyles(props.content.index)}
+            className={`flex  rounded items-center justify-between w-full p-3 font-medium rtl:text-right ${isExpanded? 'bg-white text-[#024963]' : 'bg-[#024963] text-white'} gap-3`}
+            onClick={toggleAccordion} // Toggle expansion when button is clicked
+            aria-expanded={isExpanded} // Pass the expanded state to aria-expanded attribute
+            aria-controls="accordion-collapse-body-1" 
           >
-            {props.content.q}
+            <span>{props.content.q}</span>
+            <svg
+              data-accordion-icon
+              className={`w-3 h-3 ${isExpanded ? 'rotate-0' : 'rotate-180'} shrink-0`} // Rotate the icon based on the expanded state
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 10 6"
+            >
+              <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5 5 1 1 5" />
+            </svg>
           </button>
         </h2>
-        <div
-          className={`accordion-collapse collapse ${isItemExpanded(props.content.index) ? 'show' : ''}`}
-          id={props.content.index}
-          aria-expanded={isItemExpanded(props.content.index) ? 'true' : 'false'}
-        >
-          <div className="accordion-body">
-            {props.content.a}
-          </div>
+        <div id="accordion-collapse-body-1" className={`p-3  border-b-0 bg-[#f7b141] text-black ${isExpanded ? '' : 'hidden'}`} aria-labelledby="accordion-collapse-heading-1">
+          <p className="mb-2 ">{props.content.a}</p>
         </div>
-      </div>
     </div>
   );
 };
 
 export default Accordion;
+
+

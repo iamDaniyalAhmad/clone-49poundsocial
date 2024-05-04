@@ -51,10 +51,14 @@ const FAQ = () => {
           <div className="w-[50%] md:w-[40%] mx-auto pb-12">
             <img src="images/faq.webp" width={350}  alt="FAQ" className="mt-32" />
           </div>
-          <div className=" md:w-[50%]">
-            {question.map((ques, index) => (
-              <Accordion key={index} content={ques}  />
-            ))}
+          <div className=" md:w-[50%] pt-10">
+          <div id="accordion-collapse" data-accordion="collapse">
+            {question.map((ques, index) => ( 
+              <div className="mb-3">  
+              <Accordion key={index} content={ques} />
+              </div>
+           ))}
+           </div>
           </div>
         </div>
       </div>
